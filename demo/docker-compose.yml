@@ -1,12 +1,8 @@
-version: '3.8' # A versão do docker-compose que você deseja usar
+version: '3' # A versão do docker-compose que você deseja usar
 
 services:
   web:
     image: nginx:latest # A imagem do contêiner a ser usada
     ports:
       - "80:80" # Mapeamento da porta do host para a porta do contêiner
-    deploy:
-      mode: replicated
-      replicas: 1
-    volumes:
-      - ./html:/usr/share/nginx/html # Mapeamento de um volume para o contêiner (pasta local: pasta no contêiner)
+    replicas: 2
