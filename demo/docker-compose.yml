@@ -1,7 +1,7 @@
 version: '3,2' # A versão do docker-compose que você deseja usar
 
 services:
-  web:
+  app:
     image: nginx:latest # A imagem do contêiner a ser usada
     ports:
       - "80:80" # Mapeamento da porta do host para a porta do contêiner
