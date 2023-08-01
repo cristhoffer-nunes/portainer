@@ -5,5 +5,3 @@ services:
     image: nginx:latest # A imagem do contêiner a ser usada
     ports:
       - "80:80" # Mapeamento da porta do host para a porta do contêiner
-    mode: replicated
-    replicas: 2
