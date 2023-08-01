@@ -1,0 +1,22 @@
+version: '3.8' # A versão do docker-compose que você deseja usar
+
+services:
+  web:
+    image: nginx:latest # A imagem do contêiner a ser usada
+    ports:
+      - "80:80" # Mapeamento da porta do host para a porta do contêiner
+    volumes:
+      - ./html:/usr/share/nginx/html # Mapeamento de um volume para o contêiner (pasta local: pasta no contêiner)
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: example # Variáveis de ambiente para configuração do contêiner
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data: # Nome do volume para persistência de dados
