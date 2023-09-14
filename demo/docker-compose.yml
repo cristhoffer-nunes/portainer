@@ -6,7 +6,7 @@ services:
     ports:
       - "81:81" # Mapeamento da porta do host para a porta do contêiner
   test:
-    image: nginx:stable-perl # A imagem do contêiner a ser usada
+    image: nginx:latest # A imagem do contêiner a ser usada
     ports:
       - "82:82" # Mapeamento da porta do host para a porta do contêiner
   prd:
