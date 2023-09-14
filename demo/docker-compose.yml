@@ -5,3 +5,8 @@ services:
     image: nginx:latest # A imagem do contêiner a ser usada
     ports:
       - "81:81" # Mapeamento da porta do host para a porta do contêiner
+  test:
+    image: nginx:latest # A imagem do contêiner a ser usada
+    ports:
+      - "81:81" # Mapeamento da porta do host para a porta do contêiner
+   
